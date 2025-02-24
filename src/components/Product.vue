@@ -216,7 +216,7 @@
 
 
   <div class="mt-30 text-center ">
-    <button class="bg-blue-400 px-5 py-2 cursor-pointer rounded-lg">Learn More</button>
+    <a href="/marketplace" class="bg-blue-400 px-5 py-2 cursor-pointer rounded-lg">Learn More</a>
   </div>
    
 

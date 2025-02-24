@@ -19,7 +19,7 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900">{{ item.name }}</a>
+          <a @click="active(index)" v-for="(item, index) in navigation" :key="index" :href="item.href" class="text-sm/6 font-semibold text-gray-900">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="/" class="text-sm/6 font-semibold text-red-500">Log Out<span aria-hidden="true">&rarr;</span></a>
@@ -69,7 +69,7 @@
           <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Menjual baju, celana dan sepatu dengan harga yang murah dan dijamin kualitasnya.</p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="#product" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-            <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+            <router-link to="/marketplace"><a href="/marketplace" class="text-sm/6 font-semibold text-gray-900">Learn More<span aria-hidden="true">→</span></a></router-link>
           </div>
         </div>
       </div>
@@ -119,6 +119,7 @@ export default {
   components: {Dialog, DialogPanel, Bars3Icon, XMarkIcon, Product, Footer },
   data() {
     return {
+      activeIndex: null,
       iklan: true,
       warning: true,
       scrollActive: false,
@@ -139,6 +140,9 @@ export default {
     },
     close() {
       this.iklan = !this.iklan;
+    },
+    active(index) {
+      this.activeIndex = index;
     }
   },
   mounted() {

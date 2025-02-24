@@ -2,12 +2,13 @@
 
 JANGAN LUPA FOLLOW YAA
 
+## INSTAGRAM
 ```sh
-ig
 https://www.instagram.com/ilham_yuniar123/
 ```
+
+## GITHUB
 ```sh 
-github
 https://github.com/Lynxx16-06
 ```
 
