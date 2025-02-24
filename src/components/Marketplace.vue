@@ -144,7 +144,7 @@
               <div id="baju" class="lg:col-span-3 overflow-y-auto max-h-200">
                  <!-- BAJU -->
                   <main class="">
-                      <div id="product" class="bg-white">
+                      <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
                           <div v-for="baju in style" :key="baju.name" class="justify-center flex">
                           <div class="col-span-2">
@@ -161,7 +161,41 @@
                           </div>
                         </div>
                       </div>
+                      <div id="product" class="bg-white mb-4">
+                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
+                          <div v-for="celana in celana" :key="celana.name" class="justify-center flex">
+                          <div class="col-span-2">
+                              <img :src="celana.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <div class="justify-between flex">
+                                <span>{{ celana.name }}</span>
+                                <span>{{ celana.harga }}</span>
+                              </div>
+                              <div class="flex justify-between items-center">
+                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <div id="product" class="bg-white">
+                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
+                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div class="col-span-2">
+                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <div class="justify-between flex">
+                                <span>{{ sepatu.name }}</span>
+                                <span>{{ sepatu.harga }}</span>
+                              </div>
+                              <div class="flex justify-between items-center">
+                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div id="product" class="bg-white">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
                           <div v-for="baju in style" :key="baju.name" class="justify-center flex">
                           <div class="col-span-2">
@@ -177,41 +211,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div id="product" class="bg-white">
-                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="baju in style" :key="baju.name" class="justify-center flex">
-                          <div class="col-span-2">
-                              <img :src="baju.img" alt="" class="w-70 h-90 rounded-2xl">
-                              <div class="justify-between flex">
-                                <span>{{ baju.name }}</span>
-                                <span>{{ baju.harga }}</span>
-                              </div>
-                              <div class="flex justify-between items-center">
-                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="product" class="bg-white">
-                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="baju in style" :key="baju.name" class="justify-center flex">
-                          <div class="col-span-2">
-                              <img :src="baju.img" alt="" class="w-70 h-90 rounded-2xl">
-                              <div class="justify-between flex">
-                                <span>{{ baju.name }}</span>
-                                <span>{{ baju.harga }}</span>
-                              </div>
-                              <div class="flex justify-between items-center">
-                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      </div> -->
                   </main>
               </div>
             </div>
