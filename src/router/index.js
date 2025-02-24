@@ -24,6 +24,26 @@ const router = createRouter({
       name: 'login',
       component: () => import('../views/LoginView.vue'),
     },
+    {
+      path: '/celana',
+      name: 'celana',
+      component: () => import('../components/Celana.vue'),
+    },
+    {
+      path: '/sepatu',
+      name: 'sepatu',
+      component: () => import('../components/Sepatu.vue'),
+    },
+    {
+      path: '/baju',
+      name: 'baju',
+      component: () => import('../components/Baju.vue'),
+    },
+    {
+      path: '/:pathMacth(.*)*',
+      name: 'not-found',
+      component: () => import('../views/NotFound.vue'),
+    },
   ],
 })
 

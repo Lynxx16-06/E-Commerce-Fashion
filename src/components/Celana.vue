@@ -1,5 +1,54 @@
 <template>
-    <div class="bg-white overflow-x-hidden">
+    <div class="bg-white">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
+              <span class="sr-only">Open main menu</span>
+              <Bars3Icon class="size-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900">{{ item.name }}</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="/" class="text-sm/6 font-semibold text-gray-900">Log Out<span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </nav>
+        <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+          <div class="fixed inset-0 z-50" />
+          <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
+                <span class="sr-only">Close menu</span>
+                <XMarkIcon class="size-6" aria-hidden="true" />
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
+                </div>
+                <div class="py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log Out</a>
+                </div>
+              </div>
+            </div>
+          </DialogPanel>
+        </Dialog>
+      </header>
+    </div>
+    <div class="bg-white overflow-x-hidden mt-14">
       <div>
         <!-- Mobile filter dialog -->
         <TransitionRoot as="template" :show="mobileFiltersOpen">
@@ -141,17 +190,51 @@
               </form>
   
               <!-- Product grid -->
-              <div id="baju" class="lg:col-span-3 overflow-y-auto max-h-200">
+              <div class="lg:col-span-3 overflow-y-auto max-h-200">
                  <!-- BAJU -->
                   <main class="">
-                      <div id="product" class="bg-white">
+                      <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="baju in style" :key="baju.name" class="justify-center flex">
+                          <div v-for="celana in celana" :key="celana.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="baju.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="celana.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ baju.name }}</span>
-                                <span>{{ baju.harga }}</span>
+                                <span>{{ celana.name }}</span>
+                                <span>{{ celana.harga }}</span>
+                              </div>
+                              <div class="flex justify-between items-center">
+                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="product" class="bg-white mb-4">
+                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
+                          <div v-for="celana in celana" :key="celana.name" class="justify-center flex">
+                          <div class="col-span-2">
+                              <img :src="celana.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <div class="justify-between flex">
+                                <span>{{ celana.name }}</span>
+                                <span>{{ celana.harga }}</span>
+                              </div>
+                              <div class="flex justify-between items-center">
+                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="product" class="bg-white mb-4">
+                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
+                          <div v-for="celana in celana" :key="celana.name" class="justify-center flex">
+                          <div class="col-span-2">
+                              <img :src="celana.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <div class="justify-between flex">
+                                <span>{{ celana.name }}</span>
+                                <span>{{ celana.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -163,46 +246,12 @@
                       </div>
                       <div id="product" class="bg-white">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="baju in style" :key="baju.name" class="justify-center flex">
+                          <div v-for="celana in celana" :key="celana.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="baju.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="celana.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ baju.name }}</span>
-                                <span>{{ baju.harga }}</span>
-                              </div>
-                              <div class="flex justify-between items-center">
-                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="product" class="bg-white">
-                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="baju in style" :key="baju.name" class="justify-center flex">
-                          <div class="col-span-2">
-                              <img :src="baju.img" alt="" class="w-70 h-90 rounded-2xl">
-                              <div class="justify-between flex">
-                                <span>{{ baju.name }}</span>
-                                <span>{{ baju.harga }}</span>
-                              </div>
-                              <div class="flex justify-between items-center">
-                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="product" class="bg-white">
-                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="baju in style" :key="baju.name" class="justify-center flex">
-                          <div class="col-span-2">
-                              <img :src="baju.img" alt="" class="w-70 h-90 rounded-2xl">
-                              <div class="justify-between flex">
-                                <span>{{ baju.name }}</span>
-                                <span>{{ baju.harga }}</span>
+                                <span>{{ celana.name }}</span>
+                                <span>{{ celana.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -238,12 +287,14 @@
   } from '@headlessui/vue';
   import { XMarkIcon } from '@heroicons/vue/24/outline';
   import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/vue/20/solid';
-
+  import { Bars3Icon } from '@heroicons/vue/24/outline'
+  
   export default {
     components: {
       Dialog,
       DialogPanel,
       Disclosure,
+      Bars3Icon,
       DisclosureButton,
       DisclosurePanel,
       Menu,
@@ -262,6 +313,12 @@
     data() {
       return {
         baju: true,
+        mobileMenuOpen: false,
+        navigation: [
+          { name: 'Product', href: '/home'},
+          { name: 'Marketplace', href: '/marketplace'},
+          { name: 'Company', href: '/company'},
+        ],
         sortOptions: [
           { name: 'Most Popular', href: '#', current: true },
           { name: 'Best Rating', href: '#', current: false },
@@ -272,7 +329,7 @@
         subCategories: [
           { name: 'Baju', href: '/baju' },
           { name: 'Celana', href: '/celana' },
-          { name: 'Sepatu', href: '#' },
+          { name: 'Sepatu', href: '/sepatu' },
           { name: 'Sendal', href: '#' },
           { name: 'Hoodie/Jacket', href: '#' },
         ],
