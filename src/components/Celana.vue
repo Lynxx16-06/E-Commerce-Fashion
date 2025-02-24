@@ -330,7 +330,7 @@
           { name: 'Baju', href: '/baju' },
           { name: 'Celana', href: '/celana' },
           { name: 'Sepatu', href: '/sepatu' },
-          { name: 'Sendal', href: '#' },
+          { name: 'Sendal', href: '/sendal' },
           { name: 'Hoodie/Jacket', href: '#' },
         ],
         filters: [

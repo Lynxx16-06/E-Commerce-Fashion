@@ -40,6 +40,11 @@ const router = createRouter({
       component: () => import('../components/Baju.vue'),
     },
     {
+      path: '/sendal',
+      name: 'sendal',
+      component: () => import('../components/Sendal.vue'),
+    },
+    {
       path: '/:pathMacth(.*)*',
       name: 'not-found',
       component: () => import('../views/NotFound.vue'),

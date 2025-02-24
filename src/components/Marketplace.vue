@@ -178,7 +178,7 @@
                           </div>
                         </div>
                       </div>
-                      <div id="product" class="bg-white">
+                      <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
                           <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
                           <div class="col-span-2">
@@ -195,14 +195,14 @@
                           </div>
                         </div>
                       </div>
-                      <!-- <div id="product" class="bg-white">
+                      <div id="product" class="bg-white">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="baju in style" :key="baju.name" class="justify-center flex">
+                          <div v-for="sendal in sendal" :key="sendal.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="baju.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="sendal.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ baju.name }}</span>
-                                <span>{{ baju.harga }}</span>
+                                <span>{{ sendal.name }}</span>
+                                <span>{{ sendal.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -211,7 +211,7 @@
                             </div>
                           </div>
                         </div>
-                      </div> -->
+                      </div>
                   </main>
               </div>
             </div>
@@ -272,8 +272,8 @@
         subCategories: [
           { name: 'Baju', href: '/baju' },
           { name: 'Celana', href: '/celana' },
-          { name: 'Sepatu', href: '#' },
-          { name: 'Sendal', href: '#' },
+          { name: 'Sepatu', href: '/sepatu' },
+          { name: 'Sendal', href: '/sendal' },
           { name: 'Hoodie/Jacket', href: '#' },
         ],
         filters: [
@@ -336,6 +336,15 @@
           {id:2, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r992-lqucqmwfcwuh22.webp'},
           {id:3, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98w-lqucqmwfmqtldf.webp'},
           {id:4, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
+        ],
+        detailsCelana: [
+          {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
+        ],
+        sendal: [
+          {id:1, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98r-lx9m6lye52wt9a@resize_w450_nl.webp'},
+          {id:2, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rasg-m145z52cwh9s7b.webp'},
+          {id:3, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98u-lydcarps7aw867.webp'},
+          {id:4, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98z-lyjgpja9n66g5c.webp'},
         ],
         detailsCelana: [
           {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
