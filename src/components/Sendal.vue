@@ -398,10 +398,10 @@
           {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
         ],
         sendal: [
-          {id:1, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98r-lx9m6lye52wt9a@resize_w450_nl.webp'},
-          {id:2, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rasg-m145z52cwh9s7b.webp'},
-          {id:3, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98u-lydcarps7aw867.webp'},
-          {id:4, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98z-lyjgpja9n66g5c.webp'},
+          {id:1, name: 'Sendal 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98r-lx9m6lye52wt9a@resize_w450_nl.webp'},
+          {id:2, name: 'Sendal 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rasg-m145z52cwh9s7b.webp'},
+          {id:3, name: 'Sendal 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98u-lydcarps7aw867.webp'},
+          {id:4, name: 'Sendal 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98z-lyjgpja9n66g5c.webp'},
         ],
         detailsCelana: [
           {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
