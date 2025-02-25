@@ -114,7 +114,7 @@
   
         <main class="w-full sm:px-6 lg:px-8">
           <div class="flex items-baseline justify-between border-b border-gray-200 pt-5 pb-6">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900">Sepatu</h1>
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900"><h1 class="">MostPopular</h1></h1>
   
             <div class="flex items-center">
               <Menu as="div" class="relative inline-block text-left">
@@ -193,7 +193,24 @@
               <div class="lg:col-span-3 overflow-y-auto max-h-200">
                  <!-- BAJU -->
                   <main class="">
-                      <div id="product" class="bg-white mb-4">
+                    <div id="product" class="bg-white mb-4">
+                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
+                          <div v-for="sendal in sendal" :key="sendal.name" class="justify-center flex">
+                          <div class="col-span-2">
+                              <img :src="sendal.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <div class="justify-between flex">
+                                <span>{{ sendal.name }}</span>
+                                <span>{{ sendal.harga }}</span>
+                              </div>
+                              <div class="flex justify-between items-center">
+                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
                           <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
                           <div class="col-span-2">
@@ -210,48 +227,14 @@
                           </div>
                         </div>
                       </div>
-                      <div id="product" class="bg-white mb-4">
+                    <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div v-for="celana in celana" :key="celana.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="celana.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
-                              </div>
-                              <div class="flex justify-between items-center">
-                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="product" class="bg-white mb-4">
-                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
-                          <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
-                              <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
-                              </div>
-                              <div class="flex justify-between items-center">
-                                <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-                                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="product" class="bg-white">
-                        <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
-                          <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
-                              <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
+                                <span>{{ celana.name }}</span>
+                                <span>{{ celana.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -320,8 +303,9 @@
           { name: 'Company', href: '/company'},
         ],
         sortOptions: [
-          { name: 'Most Popular', href: '/mostpopular', current: true },
+          { name: 'Most Popular', href: '#', current: true },
           { name: 'Best Rating', href: '#', current: false },
+          { name: 'Newest', href: '#', current: false },
           { name: 'Price: Low to High', href: '#', current: false },
           { name: 'Price: High to Low', href: '#', current: false },
         ],
@@ -392,6 +376,15 @@
           {id:2, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r992-lqucqmwfcwuh22.webp'},
           {id:3, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98w-lqucqmwfmqtldf.webp'},
           {id:4, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
+        ],
+        detailsCelana: [
+          {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
+        ],
+        sendal: [
+          {id:1, name: 'Sendal 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98r-lx9m6lye52wt9a@resize_w450_nl.webp'},
+          {id:2, name: 'Sendal 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rasg-m145z52cwh9s7b.webp'},
+          {id:3, name: 'Sendal 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98u-lydcarps7aw867.webp'},
+          {id:4, name: 'Sendal 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98z-lyjgpja9n66g5c.webp'},
         ],
         detailsCelana: [
           {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},

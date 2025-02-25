@@ -114,7 +114,7 @@
   
         <main class="w-full sm:px-6 lg:px-8">
           <div class="flex items-baseline justify-between border-b border-gray-200 pt-5 pb-6">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900">Sepatu</h1>
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900">Hoodie/Jacket</h1>
   
             <div class="flex items-center">
               <Menu as="div" class="relative inline-block text-left">
@@ -193,14 +193,14 @@
               <div class="lg:col-span-3 overflow-y-auto max-h-200">
                  <!-- BAJU -->
                   <main class="">
-                      <div id="product" class="bg-white mb-4">
+                    <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div v-for="hoodie in hoodie" :key="hoodie.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="hoodie.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
+                                <span>{{ hoodie.name }}</span>
+                                <span>{{ hoodie.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -210,14 +210,14 @@
                           </div>
                         </div>
                       </div>
-                      <div id="product" class="bg-white mb-4">
+                    <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div v-for="hoodie in hoodie" :key="hoodie.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="hoodie.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
+                                <span>{{ hoodie.name }}</span>
+                                <span>{{ hoodie.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -227,14 +227,14 @@
                           </div>
                         </div>
                       </div>
-                      <div id="product" class="bg-white mb-4">
+                    <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div v-for="hoodie in hoodie" :key="hoodie.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="hoodie.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
+                                <span>{{ hoodie.name }}</span>
+                                <span>{{ hoodie.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -244,14 +244,14 @@
                           </div>
                         </div>
                       </div>
-                      <div id="product" class="bg-white">
+                    <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div v-for="hoodie in hoodie" :key="hoodie.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="hoodie.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
+                                <span>{{ hoodie.name }}</span>
+                                <span>{{ hoodie.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -369,29 +369,11 @@
             ],
           },
         ],
-        style: [
-          {id:1, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg'},
-          {id:2, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-02.jpg'},
-          {id:3, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-03.jpg'},
-          {id:4, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-04.jpg'},
-        ],
-        details: [
-          {id:1, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg'},
-        ],
-        sepatu: [
-          {id:1, name: 'Sepatu 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98x-lmgcwh8s34074e@resize_w450_nl.webp'},
-          {id:2, name: 'Sepatu 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7ras9-m52gdi3xcl5i72.webp'},
-          {id:3, name: 'Sepatu 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98v-lm2zn9qsg26fc1@resize_w450_nl.webp'},
-          {id:4, name: 'Sepatu 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98p-m0cx2xzj9xr40c@resize_w450_nl.webp'},
-        ],
-        detailsSepatu: [
-          {id:1, name: 'Sepatu 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98x-lmgcwh8s34074e@resize_w450_nl.webp'},
-        ],
-        celana: [
-          {id:1, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rasf-m3093q9fspa7b0.webp'},
-          {id:2, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r992-lqucqmwfcwuh22.webp'},
-          {id:3, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98w-lqucqmwfmqtldf.webp'},
-          {id:4, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
+        hoodie: [
+          {id:1, name: 'Hoodie 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rask-m3xr2571752ga2.webp'},
+          {id:2, name: 'Hoodie 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134201-23020-c3fp9z8pvknvcc.webp'},
+          {id:3, name: 'Hoodie 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rask-m3056ubs1es176.webp'},
+          {id:4, name: 'Hoodie 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rasi-m5vikl1q6nia81@resize_w450_nl.webp'},
         ],
         detailsCelana: [
           {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},

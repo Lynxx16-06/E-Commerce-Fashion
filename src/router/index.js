@@ -45,6 +45,21 @@ const router = createRouter({
       component: () => import('../components/Sendal.vue'),
     },
     {
+      path: '/hoodie',
+      name: 'hoodie',
+      component: () => import('../components/Hoodie.vue'),
+    },
+    {
+      path: '/mostpopular',
+      name: 'mostpopular',
+      component: () => import('../components/MostPopular.vue'),
+    },
+    {
+      path: '/white',
+      name: 'white',
+      component: () => import('../components/White.vue'),
+    },
+    {
       path: '/:pathMacth(.*)*',
       name: 'not-found',
       component: () => import('../views/NotFound.vue'),

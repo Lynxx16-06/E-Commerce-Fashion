@@ -114,7 +114,7 @@
   
         <main class="w-full sm:px-6 lg:px-8">
           <div class="flex items-baseline justify-between border-b border-gray-200 pt-5 pb-6">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900">Product</h1>
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900">Sendal</h1>
   
             <div class="flex items-center">
               <Menu as="div" class="relative inline-block text-left">
@@ -320,9 +320,8 @@
           { name: 'Company', href: '/company'},
         ],
         sortOptions: [
-          { name: 'Most Popular', href: '#', current: true },
+          { name: 'Most Popular', href: '/mostpopular', current: true },
           { name: 'Best Rating', href: '#', current: false },
-          { name: 'Newest', href: '#', current: false },
           { name: 'Price: Low to High', href: '#', current: false },
           { name: 'Price: High to Low', href: '#', current: false },
         ],
@@ -330,8 +329,8 @@
           { name: 'Baju', href: '/baju' },
           { name: 'Celana', href: '/celana' },
           { name: 'Sepatu', href: '/sepatu' },
-          { name: 'Sendal', href: '#' },
-          { name: 'Hoodie/Jacket', href: '#' },
+          { name: 'Sendal', href: '/sendal' },
+          { name: 'Hoodie/Jacket', href: '/hoodie' },
         ],
         filters: [
           {

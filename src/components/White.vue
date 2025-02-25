@@ -1,54 +1,5 @@
 <template>
-    <div class="bg-white">
-      <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" />
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
-              <span class="sr-only">Open main menu</span>
-              <Bars3Icon class="size-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900">{{ item.name }}</a>
-          </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="/" class="text-sm/6 font-semibold text-gray-900">Log Out<span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </nav>
-        <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
-          <div class="fixed inset-0 z-50" />
-          <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" />
-              </a>
-              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
-                <span class="sr-only">Close menu</span>
-                <XMarkIcon class="size-6" aria-hidden="true" />
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
-                </div>
-                <div class="py-6">
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log Out</a>
-                </div>
-              </div>
-            </div>
-          </DialogPanel>
-        </Dialog>
-      </header>
-    </div>
-    <div class="bg-white overflow-x-hidden mt-14">
+    <div class="bg-white overflow-x-hidden">
       <div>
         <!-- Mobile filter dialog -->
         <TransitionRoot as="template" :show="mobileFiltersOpen">
@@ -114,7 +65,7 @@
   
         <main class="w-full sm:px-6 lg:px-8">
           <div class="flex items-baseline justify-between border-b border-gray-200 pt-5 pb-6">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900">Sepatu</h1>
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900">Product</h1>
   
             <div class="flex items-center">
               <Menu as="div" class="relative inline-block text-left">
@@ -175,14 +126,14 @@
                       <div v-for="(option, optionIdx) in section.options" :key="option.value" class="flex gap-3">
                         <div class="flex h-5 shrink-0 items-center">
                           <div class="group grid size-4 grid-cols-1">
-                            <input :id="`filter-${section.id}-${optionIdx}`" :name="`${section.id}[]`" :value="option.value" type="checkbox" :checked="option.checked" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                            <input :href="option.href" :id="`filter-${section.id}-${optionIdx}`" :name="`${section.id}[]`" :value="option.value" type="radio" :checked="option.checked" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"></input>
                             <svg class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25" viewBox="0 0 14 14" fill="none">
                               <path class="opacity-0 group-has-checked:opacity-100" d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                               <path class="opacity-0 group-has-indeterminate:opacity-100" d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                           </div>
                         </div>
-                        <label :for="`filter-${section.id}-${optionIdx}`" class="text-sm text-gray-600">{{ option.label }}</label>
+                        <a :href="option.href" :for="`filter-${section.id}-${optionIdx}`" class="text-sm text-gray-600">{{ option.label }}</a>
                       </div>
                     </div>
                   </DisclosurePanel>
@@ -190,17 +141,17 @@
               </form>
   
               <!-- Product grid -->
-              <div class="lg:col-span-3 overflow-y-auto max-h-200">
+              <div id="baju" class="lg:col-span-3 overflow-y-auto max-h-200">
                  <!-- BAJU -->
                   <main class="">
                       <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div v-for="baju in style" :key="baju.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="baju.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
+                                <span>{{ baju.name }}</span>
+                                <span>{{ baju.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -212,12 +163,12 @@
                       </div>
                       <div id="product" class="bg-white mb-4">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div v-for="celana in celana" :key="celana.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="celana.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
+                                <span>{{ celana.name }}</span>
+                                <span>{{ celana.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -246,12 +197,12 @@
                       </div>
                       <div id="product" class="bg-white">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
-                          <div v-for="sepatu in sepatu" :key="sepatu.name" class="justify-center flex">
+                          <div v-for="sendal in sendal" :key="sendal.name" class="justify-center flex">
                           <div class="col-span-2">
-                              <img :src="sepatu.img" alt="" class="w-70 h-90 rounded-2xl">
+                              <img :src="sendal.img" alt="" class="w-70 h-90 rounded-2xl">
                               <div class="justify-between flex">
-                                <span>{{ sepatu.name }}</span>
-                                <span>{{ sepatu.harga }}</span>
+                                <span>{{ sendal.name }}</span>
+                                <span>{{ sendal.harga }}</span>
                               </div>
                               <div class="flex justify-between items-center">
                                 <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
@@ -287,14 +238,12 @@
   } from '@headlessui/vue';
   import { XMarkIcon } from '@heroicons/vue/24/outline';
   import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/vue/20/solid';
-  import { Bars3Icon } from '@heroicons/vue/24/outline'
-  
+
   export default {
     components: {
       Dialog,
       DialogPanel,
       Disclosure,
-      Bars3Icon,
       DisclosureButton,
       DisclosurePanel,
       Menu,
@@ -313,17 +262,11 @@
     data() {
       return {
         baju: true,
-        mobileMenuOpen: false,
-        navigation: [
-          { name: 'Product', href: '/home'},
-          { name: 'Marketplace', href: '/marketplace'},
-          { name: 'Company', href: '/company'},
-        ],
         sortOptions: [
           { name: 'Most Popular', href: '/mostpopular', current: true },
-          { name: 'Best Rating', href: '#', current: false },
-          { name: 'Price: Low to High', href: '#', current: false },
-          { name: 'Price: High to Low', href: '#', current: false },
+          { name: 'Best Rating', href: '/bestrating', current: false },
+          { name: 'Price: Low to High', href: '/lowtohigh', current: false },
+          { name: 'Price: High to Low', href: '/hightolow', current: false },
         ],
         subCategories: [
           { name: 'Baju', href: '/baju' },
@@ -337,12 +280,11 @@
             id: 'color',
             name: 'Color',
             options: [
-              { value: 'white', label: 'White', checked: false },
-              { value: 'beige', label: 'Beige', checked: false },
-              { value: 'blue', label: 'Blue', checked: true },
-              { value: 'brown', label: 'Brown', checked: false },
-              { value: 'green', label: 'Green', checked: false },
-              { value: 'purple', label: 'Purple', checked: false },
+              { value: 'white', label: 'White', checked: true, href:'/white' },
+              { value: 'blue', label: 'Blue', checked: false, href:'/blue' },
+              { value: 'brown', label: 'Brown', checked: false, href:'/brown' },
+              { value: 'green', label: 'Green', checked: false, href: '/brown' },
+              { value: 'purple', label: 'Purple', checked: false, href: '/purple' },
             ],
           },
           {
@@ -392,6 +334,15 @@
           {id:2, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r992-lqucqmwfcwuh22.webp'},
           {id:3, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98w-lqucqmwfmqtldf.webp'},
           {id:4, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
+        ],
+        detailsCelana: [
+          {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
+        ],
+        sendal: [
+          {id:1, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98r-lx9m6lye52wt9a@resize_w450_nl.webp'},
+          {id:2, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7rasg-m145z52cwh9s7b.webp'},
+          {id:3, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98u-lydcarps7aw867.webp'},
+          {id:4, name: 'Celana 1', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98z-lyjgpja9n66g5c.webp'},
         ],
         detailsCelana: [
           {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
