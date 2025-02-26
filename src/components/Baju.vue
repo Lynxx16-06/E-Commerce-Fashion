@@ -261,6 +261,56 @@
                           </div>
                         </div>
                       </div>
+                      <!-- POP UP Baju-->
+                    <div class="">
+                      <div v-if="isModal" class="flex flex-col md:flex-row md:w-screen md:h-screen fixed inset-0 z-10 backdrop-blur-md backdrop-opacity-80 md:mt-0 mt-15">
+                        <div v-for="style in details" :key="style.id" class="bg-gray-600 fixed w-full h-200 md:left-140 md:top-60 p-10 md:h-145 md:w-200 overflow-y-auto">
+                          <div class="flex flex-col md:flex-row gap-10">
+                            <div class="w-full flex justify-center">
+                              <img :src="style.img" alt="" class="md:h-90 md:w-70 w-40 h-50 ">
+                            </div>
+                            <div class="flex flex-col w-full">
+                                <h1 class="text-3xl font-bold mb-5 text-white">{{ style.name }}</h1>
+                                <div class="flex text-white mb-5">
+                                  <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 fill-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
+                                  <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 fill-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
+                                  <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 fill-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
+                                  <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 fill-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
+                                  <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
+                                </div>
+                              <div class="flex gap-3 mb-19">
+                                <div class="w-10 h-10 rounded-full bg-blue-500 hover:border hover:border-white"></div>
+                                <div class="w-10 h-10 rounded-full bg-white hover:border hover:border-black"></div>
+                                <div class="w-10 h-10 rounded-full bg-black border-white border"></div>
+                              </div>
+                              <h1 class="text-white font-bold">Size</h1>
+                              <div class="md:flex justify-around mt-5 mb-5 text-white w-full">
+                                <button v-for="(item , index) in size" :key="index" @click="active(index)" :class="activeIndex === index ? 'bg-blue-400 border px-4 border-white rounded-lg' : 'border px-4 hover:border hover:border-white rounded-lg' ">
+                                  <div class="">
+                                    <span>{{ item.name }}</span>
+                                  </div>
+                                </button>
+                              </div>
+                              <div class="flex justify-between items-center w-full">
+                                <div class="gap-5 flex">
+                                  <button class="bg-white px-2.5 rounded-md cursor-pointer" @click="countminus">-</button>
+                                  <span class="text-white">{{ count }}</span>
+                                  <button class="bg-white px-2 rounded-md cursor-pointer" @click="countplus">+</button>
+                                </div>
+                                <div>
+                                  <button @click="" class="fill-white flex p-2 items-center rounded-lg cursor-pointer bg-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></button>
+                                </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="md:w-130 w-full text-justify mt-5 text-white">
+                            <h1 class="font-bold">Description</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio atque, repudiandae exercitationem perspiciatis labore quo laudantium, doloremque autem quibusdam rerum inventore voluptas cum accusamus impedit modi molestiae blanditiis deleniti voluptatum?</p>
+                          </div>
+                          <button @click="openModal" class="absolute top-2 right-2 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style=""><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg></button>
+                        </div>
+                      </div>
+                    </div>
                   </main>
               </div>
             </div>
@@ -268,6 +318,7 @@
         </main>
       </div>
     </div>
+
   </template>
   
   <script>
@@ -314,6 +365,10 @@
       return {
         baju: true,
         mobileMenuOpen: false,
+        isModal: false,
+        count: 0,
+        activeIndex: null,
+        // openModal: false,
         navigation: [
           { name: 'Product', href: '/home'},
           { name: 'Marketplace', href: '/marketplace'},
@@ -396,13 +451,33 @@
         detailsCelana: [
           {id:1, name: 'Celana', harga: 'Rp 100.000', img: 'https://down-id.img.susercontent.com/file/id-11134207-7r98t-lyuf1tyfuiit35.webp'},
         ],
+        size: [
+          {id:1, name: 'S', sizes: '40'},
+          {id:2, name: 'M', sizes: '41'},
+          {id:3, name: 'L', sizes: '42'},
+          {id:3, name: 'XL', sizes: '43'},
+          {id:3, name: 'XXL', sizes: '44'},
+          {id:3, name: '3XL', sizes: '45'},
+        ],
         mobileFiltersOpen: false,
       };
     },
     methods: {
         baju() {
             this.baju = !this.baju; 
-        }
+        },
+        active(index) {
+        this.activeIndex = index
+        },
+        openModal() {
+        this.isModal = !this.isModal ;
+        },
+        countminus() {
+        if (this.count > 1) this.count -= 1;
+        },
+        countplus() {
+          this.count += 1
+        },
     }
   };
 </script>

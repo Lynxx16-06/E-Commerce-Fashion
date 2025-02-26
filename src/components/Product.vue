@@ -396,7 +396,6 @@ import Swal from 'sweetalert2';
 
     methods: {
       kirim() {
-  console.log("Fungsi kirim() terpanggil!"); 
 
   if (!this.nama || !this.email || !this.text) {
     Swal.fire({
