@@ -258,16 +258,17 @@
             </div>
           </div>
 
-          <div class="mt-4 border-t pt-4">
+          <h1 class="font-bold text-center text-2xl mt-5">Isi Alamat dan Data Diri</h1>
+          <div class="border-t pt-4 h-100 overflow-x-auto">
             <!-- DATA DIRI -->
               <form action="" class="" @submit.prevent="kirim">
-                <div class="flex flex-col">
+                <div class="flex flex-col font-bold">
                   <label for="nama">Nama</label>
-                  <input type="text" v-model="nama" placeholder="Nama Anda" class="p-2 outline-none">
+                  <input type="text" v-model="nama" placeholder="Nama Anda" class="p-2 outline-none font-normal">
                   <label for="email">Email</label>
-                  <input type="email" v-model="email" placeholder="Email Anda" class="p-2 outline-none">
+                  <input type="email" v-model="email" placeholder="Email Anda" class="p-2 outline-none font-normal">
                   <label for="alamat">Alamat</label>
-                  <input type="text" v-model="text" placeholder="Alamat Anda" class="p-2 outline-none">
+                  <input type="text" v-model="text" placeholder="Alamat Anda" class="p-2 outline-none font-normal">
                   <label for="nomer">No Hp</label>
                   <div class="flex items-center">
                     <select name="" id="" v-model="nomerhp" class="">
@@ -278,9 +279,24 @@
                       <option value="+11">JPN</option>
                     </select>
                     <div class="">{{ nomerhp }}</div>
-                    <input type="number" v-model="number" placeholder="Nomer Hp" class="p-2 w-full appearance-none border-transparent focus:outline-none focus:border-none focus:ring-0">
+                    <input type="number" v-model="number" placeholder="Nomer Hp" class="p-2 w-full font-normal appearance-none border-transparent focus:outline-none focus:border-none focus:ring-0">
                   </div>
-                  <div @click="openPayment" class="flex items-center cursor-pointer py-5">Pembayaran <box-icon name="chevron-down"></box-icon></div>
+                  <div class="flex">
+                    <select name="" id="" v-model="payment">
+                      <option value="">Pembayaran</option>
+                      <option value="BRI (838367327623687)">BRI</option>
+                      <option value="BNI (51251244125)">BNI</option>
+                      <option value="BCA (15623562)">BCA</option>
+                      <option value="Mandiri (7236326326323)">Mandiri</option>
+                      <option value="LynxxBank (123456789)">LynxxBank</option>
+                      <option value="COD">COD</option>
+                    </select>
+                    <button type="button" @click="qris" class="bg-blue-400 px-4 py-1 mt-2 rounded-lg">Tampilkan Qris</button>
+                  </div>
+                  <span class="font-bold text-blue-500 rounded-lg p-3 w-70 my-5">{{ payment }}</span>
+                  <div v-if="tampilQris">
+                    <img value="qris" src="../assets/img/qris.png" alt="">
+                  </div>
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="font-semibold">Total:</span>
@@ -290,13 +306,6 @@
                   Checkout
                 </button>
               </form>
-                  <!-- Payment -->
-              <div v-if="Payment" class="fixed top-140 grid grid-cols-3 gap-5 bg-black p-10 cursor-pointer">
-                <div v-for="(payment, index) in pembayaran" :key="index" @click="active(index)" :class="activeIndex === index ? 'bg-blue-500 p-1' : 'bg-blue-300 p-1'" class="flex">
-                  <img :src="payment.img" alt="">
-                </div>
-                <button class="bg-blue-400 py-1 cursor-pointer hover:bg-blue-500">Ok</button>
-              </div>
           </div>
         </div>
       </div>
@@ -329,12 +338,14 @@ import Swal from 'sweetalert2';
         cartItems: JSON.parse(localStorage.getItem('cartItems')) || [],
         activeIndex: null,
         count: 1,
-        Payment: false,
+        payment: '',
+        tampilQris: false,
         nomerhp: '+62',
         nama: '',
         email: '',
         text: '',
         number: '',
+        berkas: '',
         cartItems: [],
         isCartOpen: false,
         isModal: false,
@@ -424,6 +435,7 @@ import Swal from 'sweetalert2';
   *Email:* ${this.email}\n
   *Alamat:* ${this.text}\n
   *Nomer:* ${this.number}\n
+  *Pembayaran:* ${this.payment}\n
   ${detailBelanja}
   💰 *Total Belanja:* ${total}\n
   Terima kasih!`;
@@ -451,6 +463,9 @@ import Swal from 'sweetalert2';
 
       openPayment() {
         this.Payment = !this.Payment;
+      },
+      qris() {
+        this.tampilQris = !this.tampilQris;
       },
       openModal() {
         this.isModal = !this.isModal ;
