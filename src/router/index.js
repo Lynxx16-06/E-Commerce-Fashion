@@ -55,6 +55,11 @@ const router = createRouter({
       component: () => import('../components/MostPopular.vue'),
     },
     {
+      path: '/bestrating',
+      name: 'bestrating',
+      component: () => import('../components/BestRating.vue'),
+    },
+    {
       path: '/white',
       name: 'white',
       component: () => import('../components/White.vue'),
