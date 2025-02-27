@@ -376,9 +376,9 @@
         ],
         sortOptions: [
           { name: 'Most Popular', href: '/mostpopular', current: true },
-          { name: 'Best Rating', href: '#', current: false },
-          { name: 'Price: Low to High', href: '#', current: false },
-          { name: 'Price: High to Low', href: '#', current: false },
+          { name: 'Best Rating', href: '/bestrating', current: false },
+          { name: 'Price: Low to High', href: '/lowtohigh', current: false },
+          { name: 'Price: High to Low', href: '/hightolow', current: false },
         ],
         subCategories: [
           { name: 'Baju', href: '/baju' },

@@ -60,6 +60,16 @@ const router = createRouter({
       component: () => import('../components/BestRating.vue'),
     },
     {
+      path: '/lowtohigh',
+      name: 'lowtohigh',
+      component: () => import('../components/LowToHigh.vue'),
+    },
+    {
+      path: '/hightolow',
+      name: 'hightolow',
+      component: () => import('../components/HighToLow.vue'),
+    },
+    {
       path: '/white',
       name: 'white',
       component: () => import('../components/White.vue'),

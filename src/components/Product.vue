@@ -12,7 +12,7 @@
           </div>
           <div class="flex justify-between items-center">
             <button @click="openModal" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
+            <button @click="openModal"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></button>
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="flex justify-between items-center">
           <button @click="openModalSepatu" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
+          <button @click="openModalSepatu"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></button>
         </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
         </div>
         <div class="flex justify-between items-center">
           <button @click="openModalCelana" class="mt-3 bg-blue-400 px-15 py-2 rounded-lg cursor-pointer">View</button>
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></span>
+          <button @click="openModalCelana"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style=""><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></button>
         </div>
         </div>
       </div>
@@ -86,11 +86,11 @@
                 <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 fill-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
                 <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
               </div>
-            <div class="flex gap-3 mb-19">
-              <div class="w-10 h-10 rounded-full bg-blue-500 hover:border hover:border-white"></div>
-              <div class="w-10 h-10 rounded-full bg-white hover:border hover:border-black"></div>
-              <div class="w-10 h-10 rounded-full bg-black border-white border"></div>
-            </div>
+              <div class="flex gap-3 mb-19">
+                <button @click="activeColor(index)" :class="activeIndexColor === index ? 'border-2 border-cyan-500 rounded-full' : ''" v-for="(color, index) in colorbaju" :key="index">
+                    <div :class="[color.currency ? 'blur-sm' : '']" :style="{backgroundColor: color.color }" class="h-10 w-10 rounded-full"></div>
+                </button>
+              </div>
             <h1 class="text-white font-bold">Size</h1>
             <div class="md:flex justify-around mt-5 mb-5 text-white w-full">
               <button v-for="(item , index) in size" :key="index" @click="active(index)" :class="activeIndex === index ? 'bg-blue-400 border px-4 border-white rounded-lg' : 'border px-4 hover:border hover:border-white rounded-lg' ">
@@ -137,11 +137,11 @@
                 <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 fill-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
                 <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
               </div>
-            <div class="flex gap-3 mb-19">
-              <div class="w-10 h-10 rounded-full bg-blue-500 hover:border hover:border-white"></div>
-              <div class="w-10 h-10 rounded-full bg-white hover:border hover:border-black"></div>
-              <div class="w-10 h-10 rounded-full bg-black border-white border"></div>
-            </div>
+              <div class="flex gap-3 mb-19">
+                <button @click="activeColor(index)" :class="activeIndexColor === index ? 'border-2 border-cyan-500 rounded-full' : ''" v-for="(color, index) in colorbaju" :key="index">
+                    <div :class="[color.currency ? 'blur-sm' : '']" :style="{backgroundColor: color.color }" class="h-10 w-10 rounded-full"></div>
+                </button>
+              </div>
             <h1 class="text-white font-bold">Size</h1>
             <div class="md:flex md:justify-around mt-5 mb-5 text-white w-full ">
               <button v-for="(item , index) in size" :key="index" @click="active(index)" :class="activeIndex === index ? 'bg-blue-400 border px-4 border-white rounded-lg cursor-pointer' : 'border px-4 cursor-pointer hover:border hover:border-white rounded-lg', 'bg-transparent' ">
@@ -188,11 +188,11 @@
                 <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 fill-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
                 <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></span>
               </div>
-            <div class="flex gap-3 mb-19">
-              <div class="w-10 h-10 rounded-full bg-blue-500 hover:border hover:border-white"></div>
-              <div class="w-10 h-10 rounded-full bg-white hover:border hover:border-black"></div>
-              <div class="w-10 h-10 rounded-full bg-black border-white border"></div>
-            </div>
+              <div class="flex gap-3 mb-19">
+                <button @click="activeColor(index)" :class="activeIndexColor === index ? 'border-2 border-cyan-500 rounded-full' : ''" v-for="(color, index) in colorbaju" :key="index">
+                    <div :class="[color.currency ? 'blur-sm' : '']" :style="{backgroundColor: color.color }" class="h-10 w-10 rounded-full"></div>
+                </button>
+              </div>
             <h1 class="text-white font-bold">Size</h1>
             <div class="md:flex md:justify-around mt-5 mb-5 text-white w-full ">
               <button v-for="(item , index) in size" :key="index" @click="active(index)" :class="activeIndex === index ? 'bg-blue-400 border px-4 border-white rounded-lg cursor-pointer' : 'border px-4 cursor-pointer hover:border hover:border-white rounded-lg', 'bg-transparent' ">
@@ -251,6 +251,7 @@
             <div class="flex-1">
               <h3 class="font-medium">{{ item.name }}</h3>
               <p class="text-sm text-gray-500">Size: {{ item.size }}</p>
+              <p class="text-sm text-gray-500">Color: {{ item.color }}</p>
               <div class="flex items-center gap-2 mt-2">
                 <button @click="updateCartQuantity(index, -1)" 
                         class="bg-white px-2.5 rounded-md cursor-pointer border">-</button>
@@ -345,6 +346,7 @@ import Swal from 'sweetalert2';
       return {
         cartItems: JSON.parse(localStorage.getItem('cartItems')) || [],
         activeIndex: null,
+        activeIndexColor: null,
         count: 1,
         payment: '',
         tampilQris: false,
@@ -364,6 +366,11 @@ import Swal from 'sweetalert2';
           {id:2, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-02.jpg'},
           {id:3, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-03.jpg'},
           {id:4, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-04.jpg'},
+        ],
+        colorbaju: [
+          {id: 1, name: 'Biru', color: '#51a2ff', currency: false},
+          {id: 2, name: 'Putih', color: '#ffff', currency: false},
+          {id: 3, name: 'Hitam', color: '#000', currency: false},
         ],
         details: [
           {id:1, name: 'Baju Kaos', harga: 'Rp 100.000', img: 'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg'},
@@ -434,7 +441,11 @@ import Swal from 'sweetalert2';
   // Buat detail belanja dari `cartItems`
   let detailBelanja = "📦 *Detail Pesanan:*\n";
   this.cartItems.forEach((item, index) => {
-    detailBelanja += `${index + 1}. ${item.name} - ${item.size} (${item.quantity}x) - ${item.harga}\n`;
+    detailBelanja += `${index + 1}. *Nama Barang:* ${item.name}\n 
+              *Ukuran Barang:*  ${item.size}\n
+              *Warna Barang:* ${item.color}\n
+              *Jumlah Barang:* (${item.quantity}x)\n
+              *Harga Barang:* ${item.harga}\n`;
   });
 
   // Buat pesan untuk WhatsApp
@@ -493,12 +504,15 @@ import Swal from 'sweetalert2';
       active(index) {
         this.activeIndex = index
       },
+      activeColor(index) {
+        this.activeIndexColor = index
+      },
       toggleCart() {
       this.isCartOpen = !this.isCartOpen;
     },
     addToCart() {
-      if (!this.activeIndex) {
-        alert('Silakan pilih ukuran terlebih dahulu');
+      if (this.activeIndex === 0) {
+        alert('Ukuran Kosong');
         return;
       }
 
@@ -507,18 +521,48 @@ import Swal from 'sweetalert2';
         return;
       }
 
+      if (this.activeIndexColor === 0) {
+        alert('Warna Kosong');
+        return;
+      }
+      
+      if (!this.activeIndexColor) {
+        Swal.fire({
+          title: 'Anda Belum Mengisi Warna',
+          text: 'Mohon isi warna terlebih dahulu ',
+          icon: 'warning',
+          confirmButtonText: 'OK'
+      });
+        return;
+      }
+
+
+      if (!this.activeIndex) {
+        Swal.fire({
+          title: 'Anda Belum Mengisi Ukuran',
+          text: 'Mohon isi ukuran terlebih dahulu',
+          icon: 'warning',
+          confirmButtonText: 'OK'
+      });
+        return;
+      }
+
       let selectedProduct;
       let selectedSize;
+      let selectedColor;
 
       if (this.isModal) {
         selectedProduct = this.details[0];
         selectedSize = this.size[this.activeIndex].name;
+        selectedColor = this.colorbaju[this.activeIndexColor].name;
       } else if (this.isModalSepatu) {
         selectedProduct = this.detailsSepatu[0];
         selectedSize = this.size[this.activeIndex].sizes;
+        selectedColor = this.colorbaju[this.activeIndexColor].name;
       } else if (this.isModalCelana) {
         selectedProduct = this.detailsCelana[0];
         selectedSize = this.size[this.activeIndex].sizes;
+        selectedColor = this.colorbaju[this.activeIndexColor].name;
       }
 
       const cartItem = {
@@ -527,11 +571,12 @@ import Swal from 'sweetalert2';
         harga: selectedProduct.harga,
         img: selectedProduct.img,
         size: selectedSize,
+        color: selectedColor,
         quantity: this.count
       };
 
       const existingItemIndex = this.cartItems.findIndex(
-        item => item.id === cartItem.id && item.size === cartItem.size
+        item => item.id === cartItem.id && item.size === cartItem.size && item.color === cartItem.color
       );
 
       if (existingItemIndex !== -1) {
@@ -545,6 +590,7 @@ import Swal from 'sweetalert2';
       // Reset count dan tampilkan cart
       this.count = 0;
       this.activeIndex = null;
+      this.activeIndexColor = null;
       this.isCartOpen = true;
       
       // Tutup modal produk
@@ -552,6 +598,7 @@ import Swal from 'sweetalert2';
       this.isModalSepatu = false;
       this.isModalCelana = false;
     },
+
     updateCartQuantity(index, change) {
       const newQuantity = this.cartItems[index].quantity + change;
       if (newQuantity > 0) {
