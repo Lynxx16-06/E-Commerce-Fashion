@@ -519,7 +519,12 @@ import Swal from 'sweetalert2';
     },
     addToCart() {
       if (this.activeIndex === 0) {
-        alert('Ukuran Kosong');
+        Swal.fire ({
+          title: 'Mohon Maaf',
+          text: 'Ukuran yang anda pilih tidak tersedia',
+          icon: 'info',
+          confirmButtonText: 'OK'
+        })
         return;
       }
 
@@ -529,7 +534,12 @@ import Swal from 'sweetalert2';
       }
 
       if (this.activeIndexColor === 0) {
-        alert('Warna Kosong');
+        Swal.fire ({
+          title: 'Mohon Maaf',
+          text: 'Warna yang anda pilih tidak tersedia',
+          icon: 'info',
+          confirmButtonText: 'OK'
+        })
         return;
       }
       
