@@ -293,16 +293,16 @@
                   <div class="flex">
                     <select name="" id="" v-model="payment">
                       <option value="">Pembayaran</option>
-                      <option value="BRI (838367327623687)">BRI</option>
-                      <option value="BNI (51251244125)">BNI</option>
-                      <option value="BCA (15623562)">BCA</option>
-                      <option value="Mandiri (7236326326323)">Mandiri</option>
-                      <option value="LynxxBank (123456789)">LynxxBank</option>
+                      <option value="BRI (838367327623687) (LynxxFashion)">BRI</option>
+                      <option value="BNI (51251244125) (LynxxFashion)">BNI</option>
+                      <option value="BCA (15623562) (LynxxFashion)">BCA</option>
+                      <option value="Mandiri (7236326326323) (LynxxFashion)">Mandiri</option>
+                      <option value="LynxxBank (123456789) (LynxxFashion)">LynxxBank</option>
                       <option value="COD">COD</option>
                     </select>
                     <button type="button" @click="qris" class="bg-blue-400 px-4 py-1 mt-2 rounded-lg">Tampilkan Qris</button>
                   </div>
-                  <span class="font-bold text-blue-500 rounded-lg p-3 w-70 my-5">{{ payment }}</span>
+                  <span class="font-bold text-blue-500 border rounded-lg p-3 w-full my-5">{{ payment }}</span>
                   <div v-if="tampilQris">
                     <img value="qris" src="../assets/img/qris.png" alt="">
                   </div>
@@ -349,7 +349,6 @@ import Swal from 'sweetalert2';
         activeIndexColor: null,
         count: 1,
         payment: '',
-        tampilQris: false,
         nomerhp: '+62',
         nama: '',
         email: '',
@@ -423,7 +422,7 @@ import Swal from 'sweetalert2';
     methods: {
       kirim() {
 
-  if (!this.nama || !this.email || !this.text) {
+  if (!this.nama || !this.email || !this.text || !this.payment) {
     Swal.fire({
       title: 'Form Belum Lengkap!',
       text: 'Mohon isi semua form sebelum mengirim.',
@@ -442,19 +441,22 @@ import Swal from 'sweetalert2';
   let detailBelanja = "📦 *Detail Pesanan:*\n";
   this.cartItems.forEach((item, index) => {
     detailBelanja += `${index + 1}. *Nama Barang:* ${item.name}\n 
-              *Ukuran Barang:*  ${item.size}\n
-              *Warna Barang:* ${item.color}\n
-              *Jumlah Barang:* (${item.quantity}x)\n
-              *Harga Barang:* ${item.harga}\n`;
+    *Ukuran Barang:*  ${item.size}\n
+    *Warna Barang:* ${item.color}\n
+    *Jumlah Barang:* (${item.quantity}x)\n
+    *Harga Barang:* ${item.harga}\n
+    =====================================`
   });
 
   // Buat pesan untuk WhatsApp
-  const message = `Halo, saya ingin melakukan checkout!\n
+  const message = `*Halo, saya ingin melakukan checkout!*\n
+  ======================================
   *Nama:* ${this.nama}\n
   *Email:* ${this.email}\n
   *Alamat:* ${this.text}\n
   *Nomer:* ${this.number}\n
   *Pembayaran:* ${this.payment}\n
+  ======================================
   ${detailBelanja}
   💰 *Total Belanja:* ${total}\n
   Terima kasih!`;
@@ -484,7 +486,12 @@ import Swal from 'sweetalert2';
         this.Payment = !this.Payment;
       },
       qris() {
-        this.tampilQris = !this.tampilQris;
+        Swal.fire ({
+          title: 'Mohon Maaf',
+          text: 'Pembayaran dengan QRIS belum tersedia',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        })
       },
       openModal() {
         this.isModal = !this.isModal ;
