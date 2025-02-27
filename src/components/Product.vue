@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="flex justify-end w-422 mt-5  ">
+    <div class="flex justify-center md:justify-end md:w-422 mt-5 w-full  ">
       <a href="/baju" class="bg-blue-500 px-3 rounded-lg py-2 text-white">Lihat Semua</a>
     </div>
   </div>
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <div class="flex justify-end w-422 mt-5  ">
+    <div class="flex justify-center md:justify-end md:w-422 mt-5 w-full  ">
       <a href="/sepatu" class="bg-blue-500 px-3 rounded-lg py-2 text-white">Lihat Semua</a>
     </div>
   </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <div class="flex justify-end w-422 mt-5  ">
+    <div class="flex justify-center md:justify-end md:w-422 mt-5 w-full  ">
       <a href="/celana" class="bg-blue-500 px-3 rounded-lg py-2 text-white">Lihat Semua</a>
     </div>
   </div>
