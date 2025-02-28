@@ -24,7 +24,7 @@
 
   <!-- SEPATU -->
   <div class="bg-white mt-40">
-    <h1 class="md:max-w-4xl md:ml-50 font-bold text-4xl w-full text-center md:text-left">Sepatu</h1>
+    <h1 class="md:max-w-4xl md:ml-50 font-bold text-4xl w-full text-center md:text-left !important">Sepatu</h1>
     <div class="mt-20 flex w-full gap-y-10 md:gap-y-0 flex-col md:flex-row md:gap-30 md:justify-center">
       <div v-for="sepatu in sepatu" :key="sepatu.id" class="flex justify-center">
       <div class="col-span-2">

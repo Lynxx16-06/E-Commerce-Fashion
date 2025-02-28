@@ -144,7 +144,7 @@
               <div id="baju" class="lg:col-span-3 overflow-y-auto max-h-200">
                  <!-- BAJU -->
                   <main class="">
-                      <div id="product" class="bg-white mb-4">
+                      <div id="product" class="bg-white mb-4" data-aos="fade-up" data-aos-duration="600">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
                           <div v-for="baju in style" :key="baju.name" class="justify-center flex">
                           <div class="col-span-2">
@@ -162,7 +162,7 @@
                         </div>
                       </div>
 
-                      <div id="product" class="bg-white mb-4">
+                      <div id="product" class="bg-white mb-4" data-aos="fade-up" data-aos-duration="1000">
                         <div class="flex w-full gap-y-10 md:gap-y-0 md:flex-row flex-col md:gap-15 md:justify-center ">
                           <div v-for="celana in celana" :key="celana.name" class="justify-center flex">
                           <div class="col-span-2">
