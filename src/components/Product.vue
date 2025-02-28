@@ -291,8 +291,8 @@
                     <input type="number" v-model="number" placeholder="Nomer Hp" class="p-2 w-full font-normal appearance-none border-transparent focus:outline-none focus:border-none focus:ring-0">
                   </div>
                   <div class="flex">
-                    <select name="" id="" v-model="payment">
-                      <option value="">Pembayaran</option>
+                    <select name="" id="" v-model="payment" class="border-none outline-none focus:outline-none">
+                      <option value="" class="border-none outline-none focus:outline-none">Pembayaran</option>
                       <option value="BRI (838367327623687) (LynxxFashion)">BRI</option>
                       <option value="BNI (51251244125) (LynxxFashion)">BNI</option>
                       <option value="BCA (15623562) (LynxxFashion)">BCA</option>

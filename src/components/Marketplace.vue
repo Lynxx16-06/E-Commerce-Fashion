@@ -505,7 +505,7 @@
           },
           {
             id: 'category',
-            name: 'Brand',
+            name: 'Category',
             options: [
               { value: 'new-arrivals', label: 'New Arrivals', checked: false },
               { value: 'sale', label: 'Sale', checked: false },
