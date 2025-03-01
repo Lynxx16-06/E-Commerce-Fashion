@@ -165,7 +165,7 @@
               </form>
   
               <!-- Product grid -->
-              <div id="baju" class="lg:col-span-3 overflow-y-auto md:max-h-200 max-h-300">
+              <div id="baju" class="lg:col-span-3 overflow-y-auto md:max-h-200 max-h-400">
                  <!-- BAJU -->
                   <main class="">
                       <div id="product" class="bg-white mb-4" data-aos="fade-up" data-aos-duration="600">
