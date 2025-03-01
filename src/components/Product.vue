@@ -617,13 +617,35 @@ import Swal from 'sweetalert2';
     },
 
     updateCartQuantity(index, change) {
-      const newQuantity = this.cartItems[index].quantity + change;
-      if (newQuantity > 0) {
-        this.cartItems[index].quantity = newQuantity;
-      } else {
-        this.cartItems.splice(index, 1);
-      }
-      this.saveCartToLocalStorage();
+    const newQuantity = this.cartItems[index].quantity + change;
+
+    if (newQuantity > 0) {
+      // Jika jumlah masih lebih dari 0, cukup perbarui nilai
+      this.cartItems[index].quantity = newQuantity;
+    } else {
+      // Konfirmasi sebelum menghapus item
+      Swal.fire({
+        title: 'Perhatian',
+        text: 'Apakah Anda yakin ingin menghapus item ini dari keranjang?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya',
+        cancelButtonText: 'Tidak'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Hapus item jika pengguna menekan "Ya"
+          this.cartItems.splice(index, 1);
+          this.saveCartToLocalStorage();
+        }
+      });
+
+      // Jangan langsung menyimpan perubahan ke local storage
+      return;
+    }
+
+    this.saveCartToLocalStorage();
     },
     removeFromCart(index) {
       this.cartItems.splice(index, 1);

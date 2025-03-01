@@ -69,12 +69,36 @@
   
             <div class="flex items-center">
               <Menu as="div" class="relative inline-block text-left">
-                <div>
+                <div class="flex gap-5">
+                  <button @click="toggleCart" class="group inline-flex justify-center text-sm cursor-pointer fill-blue-500 font-medium text-gray-700 hover:text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg>
+                    <span class="absolute -top-0.5 right-15 bg-red-500 text-white rounded-full w-4 h-4  text-xs flex items-center justify-center">
+                      1
+                    </span>
+                  </button>
                   <MenuButton class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                     Sort
                     <ChevronDownIcon class="-mr-1 ml-1 size-5 shrink-0 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
                   </MenuButton>
                 </div>
+
+
+                 <!-- Cart Popup -->
+                  <div v-if="isCartOpen" class="fixed inset-0 z-50 overflow-hidden">
+                    <div class="absolute inset-0 bg-opacity-50" @click="toggleCart"></div>
+                    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl" data-aos="fade-left" data-aos-duration="500">
+                      <div class="flex justify-between items-center p-4 border-b">
+                        <h2 class="text-lg font-semibold">Keranjang Belanja</h2>
+                        <button @click="toggleCart" class="p-2" >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <h1>Kosong</h1>
+                      </div>
+                  </div>
   
                 <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
                   <MenuItems class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white ring-1 shadow-2xl ring-black/5 focus:outline-hidden">
@@ -476,6 +500,7 @@
         isModalSepatu: false,
         isModalCelana: false,
         isModalSendal: false,
+        isCartOpen: false,
         count: 0,
         activeIndex: null,
         sortOptions: [
@@ -599,6 +624,9 @@
         openModalSendal() {
         this.isModalSendal = !this.isModalSendal ;
         },
+        toggleCart() {
+          this.isCartOpen = !this.isCartOpen;
+        }
   },
 }
 </script>

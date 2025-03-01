@@ -75,7 +75,7 @@
       </div>
 
       <!-- IKLAN -->
-      <button v-if="iklan" class="fixed md:left-80 md:top-70 md:border left-0 top-70 border-gray-300 flex" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
+      <button v-if="iklan" class="fixed md:left-80 md:top-70 md:border left-0 top-80 border-gray-300 flex" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
         <div class="flex justify-between w-full bg-none md:p-10">
           <div class="">
             <img class="rounded-2xl" src="https://cf.shopee.co.id/file/id-11134258-7rase-m5xv7j2c4lhv7f" alt="">
